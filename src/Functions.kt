@@ -1,4 +1,4 @@
-import package2.KtConstructerEg
+import kotlinpakage.KtConstructerEg
 
 /*
 * 1.How to call functions
@@ -16,7 +16,8 @@ fun main(args : Array<String>)
     println("sum is $sum ")
     println("sum is : ${sumOf2nos(12,5)} ")
     println("largest no is ${largestsNo(55,66)} , ${largestNo1(12,5)}, ${largestNo1(12,5)}")
-
+    println("default Argument volume is : ${findVolume(2,5)},${findVolume(2,5,7)}")
+    findVolume1(h=2,b=5,l=9)
     //2
     var  nameObj= Name()
     var lname: String = nameObj.getLastName()
@@ -67,8 +68,21 @@ fun largestNo2(a :Int , b : Int) :Int
                 b
             }
 
+                                    //Default Argument:Functions not present in java
+fun findVolume (l :Int, b:Int, h:Int =10) : Int
+{
+    return l*b*h;
+}
 
+                                //Named Parameter: while calling function mention variable names , actually oder is does not matter
 
+fun findVolume1 (l :Int, b:Int, h:Int =10) : Unit
+{
+    println("Named parameter:$l,$b,$h")
+
+}
+
+                    //Extension Functions :
 
 class Name
 {

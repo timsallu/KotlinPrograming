@@ -1,5 +1,7 @@
 @file : JvmName("MyCustomKotlinFileName")
 
+package kotlinpakage
+
 import javapackage.MyJavaFile
 
 fun main(args: Array<String>) {
@@ -13,4 +15,8 @@ fun main(args: Array<String>) {
     fun add(a: Int, b: Int): Int {
         return a + b;
     }
-
+@JvmOverloads //allows java function to call default argument functions
+fun findVolume (l :Int, b:Int, h:Int =10) : Int
+{
+    return l*b*h;
+}

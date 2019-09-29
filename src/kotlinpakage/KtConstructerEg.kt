@@ -1,4 +1,4 @@
-package package2
+package kotlinpakage
 
 class KtConstructerEg(var name:String) {
 
